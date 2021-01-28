@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Event Listings Short</h1>
+
+  {% for event in events%}
+    <div>
+        <p>
+            {{event.date}} : {{event.event_name}} 
+        </p>
+    </div>
+  {% endfor %}
+{% endblock %}
