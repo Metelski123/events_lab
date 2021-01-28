@@ -18,7 +18,8 @@ def create_event():
     event_guests = request.form['guests']
     event_room = request.form['room']
     event_description = request.form['description']
-    new_event = Event(event_date, event_name, event_guests, event_room, event_description)
+    event_repeat = request.form.getlist('repeat')
+    new_event = Event(event_date, event_name, event_guests, event_room, event_description, event_repeat)
     events.append(new_event)
     return redirect('/events')
 

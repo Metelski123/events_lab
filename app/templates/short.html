@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Event Listings Short</h1>
+  <h4>Event Listings Short</h4>
 
   {% for event in events%}
     <div>
         <p>
             {{event.date}} : {{event.event_name}} 
+            {% if event.repeat %}
+              <span>&#128257;</span>
+            {% endif %}
         </p>
     </div>
   {% endfor %}
