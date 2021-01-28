@@ -5,7 +5,7 @@ from app.models.events import Event
 
 @app.route('/')
 def greet():
-    return "Hello"
+    return "Events Planner"
 
 @app.route('/events')
 def event_listings_long():

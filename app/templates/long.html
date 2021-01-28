@@ -2,17 +2,17 @@
 
 {% block content %}
   <div>
-  <h1 id='list_header'>Event Listings Long</h1>
+    <h1 id='list_header'>Event Listings Long</h1>
   </div>
-  {% for event in events%}
-    <div id='listings'>
+    <section id='listings'></div>
+      {% for event in events%}
         <p>   
             {{event.date}} : {{event.event_name}} : {{event.room_location}} : {{event.guest_number}} : {{event.description}} 
             {% if event.repeat %}
               <span>&#128257;</span>
             {% endif %}
         </p>
-    </div>
-  {% endfor %}
+      {% endfor %}
+      </section>  
 {% endblock %}
 
