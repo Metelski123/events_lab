@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h4>Event Listings Long</h4>
-
+  <div>
+  <h1 id='list_header'>Event Listings Long</h1>
+  </div>
   {% for event in events%}
-    <div>
-        <p>
+    <div id='listings'>
+        <p>   
             {{event.date}} : {{event.event_name}} : {{event.room_location}} : {{event.guest_number}} : {{event.description}} 
             {% if event.repeat %}
               <span>&#128257;</span>

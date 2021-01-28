@@ -7,27 +7,29 @@
   <title>{{title}} - Listings</title>
 </head>
 <body>
-  <h1>Event Listings</h1>
-  <section id='input_area'>
-    <form action="/events" method="post">
-      <label for="date">Date</label>
-      <input type="date" name="date" id="date">
-      <label for="name">Event Name</label>
-      <input type="text" name="name" id="name">
-      <label for="room">Room Location</label>
-      <input type="text" name="room" id="room">
-      <label for="guests">No. of Guests</label>
-      <input type="text" name="guests" id="guests">
-      <label for="description">Event Description</label>
-      <textarea name="description" id="description" cols="30" rows="3"></textarea>
-      <label for="repeat">Repeat</label>
-      <input type="checkbox" name="repeat" id="repeat">
+  <article>
+    <h1>New Event</h1>
+    <section id='input_area'>
+      <form action="/events" method="post">
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date">
+        <label for="name">Event Name</label>
+        <input type="text" name="name" id="name">
+        <label for="room">Room Location</label>
+        <input type="text" name="room" id="room">
+        <label for="guests">No. of Guests</label>
+        <input type="text" name="guests" id="guests">
+        <label for="description">Event Description</label>
+        <textarea name="description" id="description" cols="30" rows="3"></textarea>
+        <label for="repeat">Repeat</label>
+        <input type="checkbox" name="repeat" id="repeat">
 
-      <input type="submit" value='Add Event'>
-  </form>
-  </section>
-  {% block content %}e
-    
-  {% endblock %}
+        <input type="submit" value='Add Event'>
+      </form>
+    </section>
+    {% block content %}e
+      
+    {% endblock %}
+  </article>
 </body>
 </html>

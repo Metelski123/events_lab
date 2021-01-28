@@ -1,0 +1,47 @@
+article {
+    width: max-content; 
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-areas:
+    "header header2"
+    "input listings";
+    column-gap: 15px;
+    border: black solid 5px;
+    padding: 5px;
+    background-color: cadetblue;
+}
+
+h1 {
+    grid-area: header;
+    text-align: center;
+}
+
+#list_header {
+    grid-area: header2;
+    text-align: center;
+
+}
+
+#input_area {
+    
+    background-color: rgb(153, 152, 152);
+    grid-area: input;
+   
+}
+
+form {
+    display: grid;
+}
+
+#listings {
+    grid-area: listings
+}
+
+input {
+    background-color: rgb(143, 181, 182);
+}
+
+textarea {
+    background-color: rgb(143, 181, 182);
+    resize: none;
+}
